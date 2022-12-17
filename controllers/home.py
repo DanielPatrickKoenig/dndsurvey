@@ -270,3 +270,10 @@ def get_questions():
         }
     ]
     return response.json(dict(types=types, questions=questions))
+
+def set_question_data():
+    user_id = auth.user.id
+    questionData = request.vars['questions']
+    print(user_id)
+    print(questionData)
+    # write question data
