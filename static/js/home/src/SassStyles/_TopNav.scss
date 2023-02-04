@@ -1,0 +1,11 @@
+ul{
+    color: $Color_White;
+    font-family: $Font_Primary;
+    text-decoration: none;
+}
+
+.top-nav-container{
+    background-color: $Color_White;
+    height: 96px;
+    background-image: url('../../public/TopNav_BackgroundImage.jpg');
+}

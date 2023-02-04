@@ -1,0 +1,13 @@
+@import '../src/SassStyles/partials/typography';
+@import '../src/SassStyles/partials/variables.scss';
+@import '../src/SassStyles/TopNav.scss';
+
+html{
+    background-color: black;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
