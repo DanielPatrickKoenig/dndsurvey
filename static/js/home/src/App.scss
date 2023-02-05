@@ -1,0 +1,22 @@
+@import '../src/SassStyles/partials/typography';
+@import '../src/SassStyles/partials/variables.scss';
+@import '../src/SassStyles/partials/mixins';
+@import '../src/SassStyles/TopNav.scss';
+@import '../src/SassStyles/LogoSVG.scss';
+
+html{
+    background-color: black;
+    font-size: $base_scale;
+    @include tablet{
+        font-size: $tablet_scale;
+    }
+    @include desktop {
+        font-size: $desktop_scale;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}

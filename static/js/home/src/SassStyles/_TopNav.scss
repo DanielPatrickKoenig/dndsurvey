@@ -1,0 +1,67 @@
+// --- container div 
+.top-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: rScale(52px);
+
+    @include tablet {
+        height: rScale(96px);
+    }
+
+    // - backgroud image
+    background-image: url(assetURL('TopNav_BackgroundImage.jpg'));
+    background-size: 129%;
+    background-position: 50%;
+    background-position-x: top;
+    background-position-y: left;
+    background-repeat: no-repeat;
+    padding: rScale(8px) rScale(20px);
+
+}
+
+// --- menu list item
+ul {
+    display: flex;
+    flex-direction: row;
+    color: $Color_White;
+    font-family: $Font_Secondary;
+    font-size: rScale(12px);
+
+    @include tablet {
+        font-size: rScale(20px);
+    }
+
+    font-weight: 500;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+
+    li {
+        text-decoration: none;
+        padding: rScale(10px) rScale(30px);
+
+        &:hover {
+            font-size: rScale(20px);
+            font-weight: 600;
+            color: $Color_LightWarm;
+            cursor: pointer;
+        }
+
+        &:active {
+            font-size: rScale(20px);
+            font-weight: 600;
+            color: $Color_LightWarm;
+            cursor: pointer;
+        }
+
+        &:focus {
+            font-size: rScale(20px);
+            font-weight: 600;
+            color: $Color_LightWarm;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
