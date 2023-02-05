@@ -1,0 +1,9 @@
+svg{
+    width: rScale(126px);
+    height: rScale(40px);
+    color: #272525;
+    @include tablet {
+        width: rScale(197px);
+        height: rScale(62px);
+    }
+}
