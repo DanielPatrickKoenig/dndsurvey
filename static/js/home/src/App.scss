@@ -3,20 +3,33 @@
 @import '../src/SassStyles/partials/mixins';
 @import '../src/SassStyles/TopNav.scss';
 @import '../src/SassStyles/LogoSVG.scss';
+// @import '../src/SassStyles/HamburgerIcon';
+// @import '../src/SassStyles/HamnurgerMenu';
 
-html{
+html {
     background-color: black;
     font-size: $base_scale;
-    @include tablet{
+
+    @include tablet {
         font-size: $tablet_scale;
     }
+
     @include desktop {
         font-size: $desktop_scale;
     }
+
+    @include desktopXL {
+        font-size: $desktopXL_scale;
+    }
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+.App {
+    max-width: rScale(1440px);
+    height: 100vh;
 }

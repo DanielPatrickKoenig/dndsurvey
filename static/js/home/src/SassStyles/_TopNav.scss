@@ -1,67 +1,170 @@
-// --- container div 
+// --- top nav container div --- //
 .top-nav-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
     height: rScale(52px);
+    padding: rScale(8px) rScale(16px);
+
+    //--- top nav backgroud image ---//
+    background-image: url(assetURL('TopNav_BackgroundImage.jpg'));
+    background-size: 186%;
+    background-position: 50%;
+    background-position-x: rScale(-63px);
+    background-position-y: left;
+    background-repeat: no-repeat;
+    padding: rScale(8px) rScale(16px);
 
     @include tablet {
         height: rScale(96px);
+        background-position-x: rScale(-98px);
+        background-size: 113%;
+        padding-left: rScale(32px);
+        padding-right: rScale(32px);
     }
 
-    // - backgroud image
-    background-image: url(assetURL('TopNav_BackgroundImage.jpg'));
-    background-size: 129%;
-    background-position: 50%;
-    background-position-x: top;
-    background-position-y: left;
-    background-repeat: no-repeat;
-    padding: rScale(8px) rScale(20px);
+    @include desktop {
+        height: rScale(96px);
+        background-position-x: rScale(-300px);
+        background-size: 123%;
+        padding-right: rScale(64px);
+        padding-left: rScale(64px);
+    }
+
+    // --- top nav logo svg --- //
+    svg {
+        position: relative;
+        top: rScale(2px);
+        padding-right: 0;
+        z-index: 20;
+    }
+
+    // --- top nav menu list item --- //
+    ul {
+        display: none;
+        flex-direction: row;
+        color: $Color_White;
+        font-family: $Font_Secondary;
+        font-size: rScale(12px);
+        font-weight: 500;
+        align-items: center;
+        list-style-type: none;
+        text-align: center;
+
+        @include tablet {
+            font-size: rScale(18px);
+            display: flex;
+        }
+
+        li {
+            text-decoration: none;
+            padding: rScale(10px) rScale(30px);
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:hover{
+                font-size: rScale(21px);
+                font-weight: 700;
+                color: $Color_MediumWarm;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // --- Hamburger Icon --- //
+    .hamburger-icon-container {
+        position: relative;
+        right: rScale(-6px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rScale(48px);
+        height: rScale(48px);
+        z-index: 20;
+
+        .icon {
+            color: $Color_LightWarm;
+            width: rScale(24px);
+            height: rScale(24px);
+        }
+
+        .icon-dark {
+            color: $Color_ExtraDarkWarm;
+            width: rScale(24px);
+            height: rScale(24px);
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+    }
 
 }
 
-// --- menu list item
-ul {
-    display: flex;
-    flex-direction: row;
-    color: $Color_White;
-    font-family: $Font_Secondary;
-    font-size: rScale(12px);
 
-    @include tablet {
-        font-size: rScale(20px);
+.hamburger-menu-container {
+    display: flex;
+    flex-direction: column;
+    padding: rScale(8px) rScale(16px);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $Color_LightWarm;
+    z-index: 10;
+
+    ul {
+        text-decoration: none;
+        font-size: rScale(12px);
+        font-weight: 500;
+        margin-top: rScale(24px);
+        margin-bottom: rScale(32px);
+
+        li {
+            list-style: none;
+            padding-top: rScale(16px);
+            padding-bottom: rScale(16px);
+            border-bottom: 1px solid rgba(18, 10, 10, 0.4);
+            text-align: center;
+
+            &:hover {
+                // background-color: $Color_MediumWarm;
+                font-weight: 700;
+                font-size: rScale(13px);
+                transition: 0.2s ease-in-out;
+                background-image: linear-gradient(to right,
+                        $Color_White,
+                        $Color_MediumWarm, $Color_MediumWarm, $Color_White);
+            }
+
+            a {
+                text-decoration: none;
+                color: $Color_ExtraDarkWarm;
+                text-align: center;
+            }
+
+            &:first-child {
+                margin-top: rScale(50px);
+            }
+        }
     }
 
-    font-weight: 500;
-    align-items: center;
-    list-style-type: none;
-    text-align: center;
+    &.active {
+        left: 0;
+        transition: 0.5s ease-in-out;
+        width: 100%;
+    }
 
-    li {
-        text-decoration: none;
-        padding: rScale(10px) rScale(30px);
+    &.inactive {
+        left: 100%;
+        transition: 0.5s ease-in-out;
 
-        &:hover {
-            font-size: rScale(20px);
-            font-weight: 600;
-            color: $Color_LightWarm;
-            cursor: pointer;
-        }
-
-        &:active {
-            font-size: rScale(20px);
-            font-weight: 600;
-            color: $Color_LightWarm;
-            cursor: pointer;
-        }
-
-        &:focus {
-            font-size: rScale(20px);
-            font-weight: 600;
-            color: $Color_LightWarm;
-            text-decoration: underline;
-            cursor: pointer;
-        }
     }
 }

@@ -1,11 +1,13 @@
 
 // ------ Breakpoint Sizes ------
 $tablet: 768px;
-$desktop: 1440px;
+$desktop: 1024px;
+$desktopXL: 1440px;
 
 $base_scale: 5vw;
 $tablet_scale: 1.91vw;
 $desktop_scale: 1.1112vw;
+$desktopXL_scale: 16px;
 
 // ------ Color Variables ----- 
 /* Cool Colors */
@@ -32,7 +34,7 @@ $Color_White: #fff;
 
 $Font_BaseSize: 16px;
 $Font_Primary: 'Roboto', Helvetica, Arial, sans-serif;
-$Font_Secondary: 'Merriweathe', Georgia, Times, serif;
+$Font_Secondary: 'Roboto Slab', Georgia, Times, serif;
 
 
 // ----- Base URL for image links
