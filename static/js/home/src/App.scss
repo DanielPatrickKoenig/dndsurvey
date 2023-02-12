@@ -3,8 +3,8 @@
 @import '../src/SassStyles/partials/mixins';
 @import '../src/SassStyles/TopNav.scss';
 @import '../src/SassStyles/LogoSVG.scss';
-@import '../src/SassStyles/HamburgerIcon';
-@import '../src/SassStyles/HamnurgerMenu';
+// @import '../src/SassStyles/HamburgerIcon';
+// @import '../src/SassStyles/HamnurgerMenu';
 
 html {
     background-color: black;
@@ -29,7 +29,7 @@ html {
     margin: 0;
 }
 
-.App{
+.App {
     max-width: rScale(1440px);
     height: 100vh;
 }
