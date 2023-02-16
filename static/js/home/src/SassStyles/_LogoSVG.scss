@@ -1,9 +1,10 @@
-.logo{
-    width: rScale(126px);
-    height: rScale(40px);
+.logo {
+    width: rScale(110px);
+    height: rScale(35px);
     color: #272525;
+
     @include tablet {
-        width: rScale(197px);
-        height: rScale(62px);
+        width: rScale(230.4px);
+        height: rScale(78px);
     }
 }
