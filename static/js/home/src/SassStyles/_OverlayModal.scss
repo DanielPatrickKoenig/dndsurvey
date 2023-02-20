@@ -1,0 +1,41 @@
+.overlay-modal_main-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: $Color_LightWarm;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    text-align: center;
+    padding-top: rScale(32px);
+
+    .overlay-modal_content-container {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+
+        button {
+            display: flex;
+            position: absolute;
+            top: rScale(16px);
+            right: rScale(16px);
+            flex-direction: column;
+            background-color: transparent;
+            color: $Color_White;
+            border: 0;
+        }
+
+        svg {
+            width: rScale(32px);
+            height: rScale(32px);
+            padding-bottom: rScale(4px);
+        }
+    }
+}
+
+.notActive{
+    display: none;
+}
