@@ -13,11 +13,12 @@ import LogoSVG from './LogoSVG';
 import '../../src/App.scss';
 
 
-const TopNav = () => {
+const TopNav = (props) => {
 
-    const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+    const instructionsClickHandler = () => {
+        props.showInstructions(true);
+    }
 
-    const hamburgerMenuToggleHandler = () => setHamburgerMenuOpen(!hamburgerMenuOpen);
 
     return (
         <>
@@ -34,9 +35,9 @@ const TopNav = () => {
                         <FontAwesomeIcon icon={faHouseChimney} className='icon'></FontAwesomeIcon>
                         <p>Home</p>
                     </div>
-                    <div className='mobile-topnav-icon-set'>
+                    <div className='mobile-topnav-icon-set' onClick={instructionsClickHandler}>
                         <FontAwesomeIcon icon={faCircleQuestion} className='icon'></FontAwesomeIcon>
-                        <p>Instruction</p>
+                        <p>Instructions</p>
                     </div>
                 </div>
 
@@ -46,14 +47,6 @@ const TopNav = () => {
                 </div> */}
 
 
-            </div>
-            <div className={hamburgerMenuOpen ? 'hamburger-menu-container active' : 'hamburger-menu-container inactive' } >
-            {/* <div className='hamburger-menu-container' > */}
-                {/* <LogoSVG /> */}
-                <ul>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>Instructions</a></li>
-                </ul>
             </div>
         </>
     );
