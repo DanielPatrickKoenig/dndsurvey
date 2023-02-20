@@ -6,6 +6,7 @@
 @import '../src/SassStyles/Homepage';
 @import '../src/SassStyles/Button';
 @import '../src/SassStyles/OverlayModal';
+@import '../src/SassStyles/SurveyQuestions';
 // @import '../src/SassStyles/HamburgerIcon';
 // @import '../src/SassStyles/HamnurgerMenu';
 
@@ -61,7 +62,7 @@ html {
         background-size: cover;
     }
 
-    .main-content-container {
+    .main-content_container {
         display: flex;
         flex-direction: column;
     }
