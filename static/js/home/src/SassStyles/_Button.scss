@@ -1,0 +1,18 @@
+.button {
+    background-color: $Color_MediumDarkWarm;
+    color: $Color_ExtraDarkWarm;
+    padding: rScale(8px) rScale(18px);
+    font-family: $Font_Primary;
+    font-size: rScale(16px);
+    font-weight: 700;
+    border-radius: rScale(4px);
+    margin-top: rScale(24px);
+    width: fit-content;
+
+    @include tablet {
+        font-size: rScale(32px);
+        border-radius: rScale(8px);
+        margin-top: rScale(48px);
+        padding: rScale(16px) rScale(32px);
+    }
+}

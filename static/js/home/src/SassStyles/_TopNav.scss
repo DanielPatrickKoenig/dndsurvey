@@ -18,6 +18,7 @@
     background-position-y: left;
     background-repeat: no-repeat;
     padding: rScale(8px) rScale(16px);
+    
 
 
     // --- top nav - media sizes --- //
@@ -151,6 +152,7 @@
 
             &:hover {
                 transform: scale(110%);
+                transform-origin: center;
                 font-weight: 700;
                 color: $Color_MediumWarm;
                 cursor: pointer;

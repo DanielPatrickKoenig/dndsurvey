@@ -3,6 +3,9 @@
 @import '../src/SassStyles/partials/mixins';
 @import '../src/SassStyles/TopNav.scss';
 @import '../src/SassStyles/LogoSVG.scss';
+@import '../src/SassStyles/Homepage';
+@import '../src/SassStyles/Button';
+@import '../src/SassStyles/OverlayModal';
 // @import '../src/SassStyles/HamburgerIcon';
 // @import '../src/SassStyles/HamnurgerMenu';
 
@@ -30,6 +33,36 @@ html {
 }
 
 .App {
-    max-width: rScale(1440px);
+    // max-width: rScale(1440px);
     height: 100vh;
+    width: 100vw;
+
+    background-image: url(assetURL('homepage-background-3.jpg'));
+    // background-size: 240%;
+    background-size: cover;
+    background-position: 50%;
+    // background-position-x: rScale(-48px);
+    // background-position-y: bottom;
+    background-repeat: no-repeat;
+
+    @include tablet {
+        // background-size: 220%;
+        background-size: cover;
+        // background-position-x: rScale(-108px);
+    }
+
+    @include desktop {
+        // background-size: 220%;
+        background-size: cover;
+        // background-position-x: rScale(-317px);
+    }
+
+    @include desktopXL{
+        background-size: cover;
+    }
+
+    .main-content-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -20,7 +20,7 @@ const TopNav = () => {
     const hamburgerMenuToggleHandler = () => setHamburgerMenuOpen(!hamburgerMenuOpen);
 
     return (
-        <div>
+        <>
             <div className='top-nav-container'>
                 <LogoSVG />
                 <ul>
@@ -55,7 +55,7 @@ const TopNav = () => {
                     <li><a href='#'>Instructions</a></li>
                 </ul>
             </div>
-        </div>
+        </>
     );
 }
 

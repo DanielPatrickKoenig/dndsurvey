@@ -1,0 +1,38 @@
+.homepage-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid transparent;
+    margin: 0 auto;
+
+    h2 {
+        font-size: rScale(13px);
+        color: $Color_MediumCool;
+        font-family: $Font_Primary;
+        font-weight: 400;
+        line-height: 180%;
+        text-align: center;
+        padding-top: rScale(52px);
+        width: 80%;
+
+        @include tablet {
+            padding-top: rScale(186px);
+            font-size: rScale(24px);
+            width: 72%;
+        }
+
+        @include desktop {
+            font-size: rScale(32px);
+            // width: rScale(700px);
+            width: 75%;
+        }
+
+        @include desktopXL {
+            font-size: rScale(32px);
+            // width: rScale(700px);
+            width: 1077px;
+        }
+
+    }
+}
